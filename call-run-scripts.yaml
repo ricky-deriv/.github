@@ -1,0 +1,19 @@
+name: 'call run scripts'
+
+on: 
+  pull_request:
+    paths:
+      - aws/**
+
+defaults:
+  run:
+    shell: bash
+
+jobs: 
+  test-job:
+    name: "test starter job"
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'running bash'
+      run: | 
+        echo "hello from starter..."
